@@ -1,0 +1,42 @@
+{
+  "name": "postman-viewer",
+  "version": "1.0.0",
+  "description": "Postman collection JSON dosyalarını okunabilir bir postman view formatına dönüştürmesi planlanan analiz paketi",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "dev": "tsup src/index.ts --dts --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "postman",
+    "json",
+    "parser",
+    "react",
+    "nextjs",
+    "typescript",
+    "viewer"
+  ],
+  "author": "Adınız Soyadınız",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kullanici/postman-viewer.git"
+  }
+}

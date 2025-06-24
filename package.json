@@ -1,0 +1,52 @@
+{
+  "name": "postman-viewer",
+  "version": "1.0.2",
+  "description": "Postman collection JSON dosyalarını okunabilir bir postman view formatına dönüştürmesi planlanan analiz paketi",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "dev": "tsup src/index.ts --dts --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "postman",
+    "json",
+    "parser",
+    "react",
+    "nextjs",
+    "typescript",
+    "viewer"
+  ],
+  "author": "Muhammet Yeşil",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhmmtysil/postman-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhmmtysil/postman-viewer/issues"
+  },
+  "homepage": "https://github.com/mhmmtysil/postman-viewer#readme",
+  "dependencies": {
+    "drafter.js": "^3.2.0",
+    "parse-curl": "^0.2.6",
+    "path": "^0.12.7",
+    "raml-1-parser": "^1.1.67"
+  }
+}
